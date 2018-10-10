@@ -38,6 +38,8 @@
 #include "bspconfig.h"
 #endif
 
+#include "retargetserial.h"
+
 /***********************************************************************************************//**
  * @addtogroup Application
  * @{
@@ -97,6 +99,10 @@ void main(void)
   initApp();
 
   notifyChar.value = 0x0000;
+
+  RETARGET_SerialInit();
+
+ printf ("testing VCOM Functionality");
 
 
   // Initialize stack

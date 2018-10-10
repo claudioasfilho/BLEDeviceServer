@@ -1,10 +1,4 @@
-main.o: ../main.c ../init_mcu.h ../init_board.h ../init_app.h \
- ../ble-configuration.h ../board_features.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/bg_types.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/soc/native_gecko.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hal-config.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/board_features.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hardware/kit/EFR32MG13_BRD4159A/config/hal-config-board.h \
+retargetio.o: ../retargetio.c \
  /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/Device/SiliconLabs/EFR32MG13P/Include/em_device.h \
  /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/Device/SiliconLabs/EFR32MG13P/Include/efr32mg13p632f512gm48.h \
  /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/CMSIS/Include/core_cm4.h \
@@ -58,46 +52,7 @@ main.o: ../main.c ../init_mcu.h ../init_board.h ../init_app.h \
  /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/Device/SiliconLabs/EFR32MG13P/Include/efr32mg13p_prs_signals.h \
  /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/Device/SiliconLabs/EFR32MG13P/Include/efr32mg13p_dmareq.h \
  /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/Device/SiliconLabs/EFR32MG13P/Include/efr32mg13p_af_ports.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/Device/SiliconLabs/EFR32MG13P/Include/efr32mg13p_af_pins.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/halconfig/inc/hal-config/hal-config-types.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_gpio.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_bus.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_assert.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hal-config-app-common.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/gecko_configuration.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/bg_gattdb_def.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/bg_types.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/bg_errorcodes.h \
- ../gatt_db.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/bg_gattdb_def.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_emu.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_cmu.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_gpio.h \
- ../hal-config.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hardware/kit/common/halconfig/bsphalconfig.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hardware/kit/common/bsp/bsp_bcp.h \
- ../retargetserial.h \
- /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hardware/kit/common/halconfig/retargetserialhalconfig.h
-
-../init_mcu.h:
-
-../init_board.h:
-
-../init_app.h:
-
-../ble-configuration.h:
-
-../board_features.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/bg_types.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/soc/native_gecko.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hal-config.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/board_features.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hardware/kit/EFR32MG13_BRD4159A/config/hal-config-board.h:
+ /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/Device/SiliconLabs/EFR32MG13P/Include/efr32mg13p_af_pins.h
 
 /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/Device/SiliconLabs/EFR32MG13P/Include/em_device.h:
 
@@ -206,41 +161,3 @@ main.o: ../main.c ../init_mcu.h ../init_board.h ../init_app.h \
 /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/Device/SiliconLabs/EFR32MG13P/Include/efr32mg13p_af_ports.h:
 
 /Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/Device/SiliconLabs/EFR32MG13P/Include/efr32mg13p_af_pins.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/halconfig/inc/hal-config/hal-config-types.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_gpio.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_bus.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_assert.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hal-config-app-common.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/gecko_configuration.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/bg_gattdb_def.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/bg_types.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/bg_errorcodes.h:
-
-../gatt_db.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/protocol/bluetooth/ble_stack/inc/common/bg_gattdb_def.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_emu.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_cmu.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/platform/emlib/inc/em_gpio.h:
-
-../hal-config.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hardware/kit/common/halconfig/bsphalconfig.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hardware/kit/common/bsp/bsp_bcp.h:
-
-../retargetserial.h:
-
-/Users/clfilho/SimplicityStudio/BLE/BLEDeviceServerAndroid/hardware/kit/common/halconfig/retargetserialhalconfig.h:
