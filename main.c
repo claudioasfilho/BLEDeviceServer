@@ -172,6 +172,8 @@ void main(void)
                   gecko_cmd_hardware_set_soft_timer(3277, 0, 0);
 
                 } else if (evt->data.evt_gatt_server_characteristic_status.client_config_flags == 0x00) {
+
+                	printf("OK --- > Notifications have been turned OFF. \r\n");
                   /* Indications have been turned OFF - stop the timer. */
                   gecko_cmd_hardware_set_soft_timer(0, 0, 0);
                 }
