@@ -1,5 +1,7 @@
 # BLEDeviceServer
-This is intended to be used with the BLE Central example.
+This is intended to be used with the BLE Central example
+
+https://github.com/claudioasfilho/BLECentral
 
 It has a Demo Service which contains a notification enabled Characteristic and a Read and Write Characteristic.
 
