@@ -75,7 +75,14 @@ static const gecko_configuration_t config = {
 uint8_t boot_to_dfu = 0;
 
 uint8_t RW_CHAR = 0x55;
-uint16_t NOTIFY_CHAR = 0x0000;
+
+typedef union
+		{
+	uint16_t value;
+	uint8_t array[2];
+	} NOTIFY_CHAR;
+
+NOTIFY_CHAR notifyChar;
 
 /**
  * @brief  Main function
@@ -88,6 +95,9 @@ void main(void)
   initBoard();
   // Initialize application
   initApp();
+
+  notifyChar.value = 0x0000;
+
 
   // Initialize stack
   gecko_init(&config);
@@ -150,8 +160,10 @@ void main(void)
 
       case gecko_evt_hardware_soft_timer_id:
 
+    	  notifyChar.value++;
+
     	  //It sends the notifications
-    	  gecko_cmd_gatt_server_send_characteristic_notification(0xFF, gattdb_NOTIFY_CHAR, 2, NOTIFY_CHAR++);
+    	  gecko_cmd_gatt_server_send_characteristic_notification(0xFF, gattdb_NOTIFY_CHAR, 2, notifyChar.array);
         break;
 
       case gecko_evt_le_connection_closed_id:
