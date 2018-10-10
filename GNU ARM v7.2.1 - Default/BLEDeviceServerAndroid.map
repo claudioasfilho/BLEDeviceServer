@@ -8779,28 +8779,28 @@ OUTPUT(BLEDeviceServerAndroid.axf elf32-littlearm)
  .debug_aranges
                 0x0000000000000878       0xb8 ./platform/emlib/src/em_usart.o
 
-.debug_line     0x0000000000000000     0x7e29
+.debug_line     0x0000000000000000     0x7e2b
  .debug_line    0x0000000000000000      0x1c2 ./application_properties.o
  .debug_line    0x00000000000001c2      0x1ba ./gatt_db.o
  .debug_line    0x000000000000037c      0x2a0 ./init_app.o
  .debug_line    0x000000000000061c      0x331 ./init_board_efr32xg1.o
  .debug_line    0x000000000000094d      0x34d ./init_mcu_efr32xg1.o
- .debug_line    0x0000000000000c9a      0x593 ./main.o
- .debug_line    0x000000000000122d      0x436 ./pti.o
- .debug_line    0x0000000000001663      0xf8f ./hardware/kit/common/drivers/mx25flash_spi.o
- .debug_line    0x00000000000025f2      0x1b6 ./platform/Device/SiliconLabs/EFR32MG13P/Source/GCC/startup_efr32mg13p.o
- .debug_line    0x00000000000027a8      0x357 ./platform/Device/SiliconLabs/EFR32MG13P/Source/system_efr32mg13p.o
- .debug_line    0x0000000000002aff      0x4dd ./platform/emdrv/sleep/src/sleep.o
- .debug_line    0x0000000000002fdc     0x1096 ./platform/emlib/src/em_cmu.o
- .debug_line    0x0000000000004072      0x515 ./platform/emlib/src/em_core.o
- .debug_line    0x0000000000004587     0x138e ./platform/emlib/src/em_crypto.o
- .debug_line    0x0000000000005915      0xba2 ./platform/emlib/src/em_emu.o
- .debug_line    0x00000000000064b7      0x44b ./platform/emlib/src/em_gpio.o
- .debug_line    0x0000000000006902      0x4a0 ./platform/emlib/src/em_msc.o
- .debug_line    0x0000000000006da2      0x335 ./platform/emlib/src/em_rmu.o
- .debug_line    0x00000000000070d7      0x3f9 ./platform/emlib/src/em_rtcc.o
- .debug_line    0x00000000000074d0      0x2e6 ./platform/emlib/src/em_system.o
- .debug_line    0x00000000000077b6      0x673 ./platform/emlib/src/em_usart.o
+ .debug_line    0x0000000000000c9a      0x595 ./main.o
+ .debug_line    0x000000000000122f      0x436 ./pti.o
+ .debug_line    0x0000000000001665      0xf8f ./hardware/kit/common/drivers/mx25flash_spi.o
+ .debug_line    0x00000000000025f4      0x1b6 ./platform/Device/SiliconLabs/EFR32MG13P/Source/GCC/startup_efr32mg13p.o
+ .debug_line    0x00000000000027aa      0x357 ./platform/Device/SiliconLabs/EFR32MG13P/Source/system_efr32mg13p.o
+ .debug_line    0x0000000000002b01      0x4dd ./platform/emdrv/sleep/src/sleep.o
+ .debug_line    0x0000000000002fde     0x1096 ./platform/emlib/src/em_cmu.o
+ .debug_line    0x0000000000004074      0x515 ./platform/emlib/src/em_core.o
+ .debug_line    0x0000000000004589     0x138e ./platform/emlib/src/em_crypto.o
+ .debug_line    0x0000000000005917      0xba2 ./platform/emlib/src/em_emu.o
+ .debug_line    0x00000000000064b9      0x44b ./platform/emlib/src/em_gpio.o
+ .debug_line    0x0000000000006904      0x4a0 ./platform/emlib/src/em_msc.o
+ .debug_line    0x0000000000006da4      0x335 ./platform/emlib/src/em_rmu.o
+ .debug_line    0x00000000000070d9      0x3f9 ./platform/emlib/src/em_rtcc.o
+ .debug_line    0x00000000000074d2      0x2e6 ./platform/emlib/src/em_system.o
+ .debug_line    0x00000000000077b8      0x673 ./platform/emlib/src/em_usart.o
 
 .debug_str      0x0000000000000000     0xcb3c
  .debug_str     0x0000000000000000      0x242 ./application_properties.o

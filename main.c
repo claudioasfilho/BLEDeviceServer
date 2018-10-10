@@ -145,11 +145,12 @@ void main(void)
               if ((evt->data.evt_gatt_server_characteristic_status.characteristic == gattdb_NOTIFY_CHAR)
                   && (evt->data.evt_gatt_server_characteristic_status.status_flags == 0x01)) {
                 if (evt->data.evt_gatt_server_characteristic_status.client_config_flags == 0x01) {
+
                   /* Notifications have been turned ON - start the repeating timer. The 1st parameter '32768'
-                   * tells the timer to run for 1 second (32.768 kHz oscillator), the 2nd parameter is
+                   * tells the timer to run for 100ms (32.768 kHz oscillator), the 2nd parameter is
                    * the timer handle and the 3rd parameter '0' tells the timer to repeat continuously until
                    * stopped manually.*/
-                  gecko_cmd_hardware_set_soft_timer(32768, 0, 0);
+                  gecko_cmd_hardware_set_soft_timer(3277, 0, 0);
 
                 } else if (evt->data.evt_gatt_server_characteristic_status.client_config_flags == 0x00) {
                   /* Indications have been turned OFF - stop the timer. */
