@@ -102,7 +102,7 @@ void main(void)
 
   RETARGET_SerialInit();
 
- printf ("testing VCOM Functionality");
+
 
 
   // Initialize stack
@@ -122,6 +122,8 @@ void main(void)
        * Here the system is set to start advertising immediately after boot procedure. */
       case gecko_evt_system_boot_id:
 
+    	  printf ("OK --- > BLE Server device Up.\r\n");
+
         /* Set advertising parameters. 100ms advertisement interval.
          * The first parameter is advertising set handle
          * The next two parameters are minimum and maximum advertising interval, both in
@@ -134,12 +136,20 @@ void main(void)
         break;
 
 
+        /* Connection opened event */
+		case gecko_evt_le_connection_opened_id:
+
+			printf("OK --- > Connected to Central device.\r\n");
+
+		break;
+
+
       case gecko_evt_gatt_server_user_read_request_id:
 
                if (evt->data.evt_gatt_server_user_read_request.characteristic == gattdb_RW_CHAR )
                {
-
                    gecko_cmd_gatt_server_send_user_read_response(evt->data.evt_gatt_server_user_read_request.connection,gattdb_RW_CHAR,0,1, &RW_CHAR);
+            	   printf("OK --- > Central device read RW_CHAR = %d.\r\n", RW_CHAR);
                }
       break;
 
@@ -156,6 +166,9 @@ void main(void)
                    * tells the timer to run for 100ms (32.768 kHz oscillator), the 2nd parameter is
                    * the timer handle and the 3rd parameter '0' tells the timer to repeat continuously until
                    * stopped manually.*/
+
+				  printf("OK --- > Central device enabled Notification Service. \r\n");
+
                   gecko_cmd_hardware_set_soft_timer(3277, 0, 0);
 
                 } else if (evt->data.evt_gatt_server_characteristic_status.client_config_flags == 0x00) {
@@ -170,10 +183,15 @@ void main(void)
     	  notifyChar.value++;
 
     	  //It sends the notifications
+
     	  gecko_cmd_gatt_server_send_characteristic_notification(0xFF, gattdb_NOTIFY_CHAR, 2, notifyChar.array);
+    	  printf("OK --- > Notifying Central notifyChar = %d.\r\n", notifyChar.value);
+
         break;
 
       case gecko_evt_le_connection_closed_id:
+
+    	  printf("OK --- > Disconnected from Central device.\r\n");
 
         /* Check if need to boot to dfu mode */
         if (boot_to_dfu) {
@@ -196,8 +214,12 @@ void main(void)
 	  if (evt->data.evt_gatt_server_user_write_request.characteristic == gattdb_RW_CHAR) {
 			   /* Change Global variable tied to Characteristic */
 		  	  RW_CHAR = evt->data.evt_gatt_server_attribute_value.value.data[0];
+
+			   printf("OK --- > Central Device has written to RW_CHAR = %d.\r\n", RW_CHAR);
+
 			   /* Send response to Write Request */
 			   gecko_cmd_gatt_server_send_user_write_response( evt->data.evt_gatt_server_user_write_request.connection, gattdb_RW_CHAR, bg_err_success);
+
 			 }
 
         if (evt->data.evt_gatt_server_user_write_request.characteristic == gattdb_ota_control) {
